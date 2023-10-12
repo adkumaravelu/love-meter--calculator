@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>love test</title>
+    <link rel ="icon" href="C:\Users\kumar\OneDrive\Desktop\javascript.js\love logo.jpeg">
+    <style>
+        *{
+            margin: 10px;
+            padding: 10px;
+        }
+        body{
+            background-image: url("./l.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        .form{
+            position:relative;
+        }
+        #txt-1{
+            border-radius: 8px;
+            border: 2px solid blue;
+            width: 200px;
+            height:15px;
+            position:absolute;
+            top:30%;
+            bottom: 70%;
+            right:30%;
+            left:30%;
+        }
+        #txt-2{
+            border-radius: 8px;
+            border: 2px solid blue;
+            width: 200px;
+            height:15px;
+            position:absolute;
+            top:30%;
+            bottom: 70%;
+            right:50%;
+            left:50%;
+        }
+        #txt-1:hover{
+            border: 3px solid greenyellow;
+
+        }
+        #txt-2:hover{
+            border: 3px solid greenyellow;
+            
+        }
+        button{
+            border-radius:10px;
+            width: 150px;
+            height: 40px;
+            text-align: center;
+            font-size: larger;
+            position: fixed;
+            top:40%;
+            bottom: 60%;
+            left: 42%;
+            right: 44%;
+            background-color:slategray;
+            color:tomato;
+            font-weight: bold;
+        
+        }
+        button:hover{
+            background-color: blueviolet;
+            color: white;
+            
+        }
+        h2{
+            color: fuchsia;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>check your love meter</h2>
+    <form>
+        <input id="txt-1" type="text" placeholder="first person" onfocus="this.value=''">
+        <input id="txt-2" type="text" placeholder="second person" onfocus="this.value=''">
+        <br>
+    </form>
+    <button type="button" onclick="loveScore()">check</button>
+    <p id="demo"></p>
+    <script>
+       function loveScore(){
+            var name1=document.getElementById("txt-1").value;
+            var name2=document.getElementById("txt-2").value;
+            if(name1.length<=3){
+              alert("enter more character");  
+            }
+            if(name1.length<=3){
+              alert("enter more character");  
+            }
+
+            else{
+                var love=Math.random()*100;
+                love=Math.floor(love);
+                alert(love+"%")
+            }
+
+
+       }
+    </script>
+</body>
+</html>
